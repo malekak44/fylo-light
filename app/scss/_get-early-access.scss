@@ -1,0 +1,50 @@
+.get-early-access {
+    background: $desaturatedBlue;
+    padding: 3.5rem 0;
+    color: white;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        flex: 1;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            width: 32rem;
+        }
+    }
+
+    &__form {
+        flex: 1;
+
+        form {
+            width: 70%;
+            margin-left: auto;
+
+            input {
+                display: block;
+                width: 100%;
+                border: none;
+                border-radius: 3px;
+                outline: none;
+                padding: 15px;
+                margin-bottom: 1.5rem;
+
+                &::placeholder {
+                    color: $lightGray;
+                }
+            }
+        }
+
+        .button {
+            padding: 15px 52px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $veryDarkBlue;
+    font-family: $openSans;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+**::after {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 74.3125rem;
+    margin: auto;
+}
+
+h1,
+h2 {
+    font-family: $raleway;
+}
+
+.button {
+    color: $lightGrayishBlue;
+    background: $brightBlue;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 13px 52px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: $raleway;
+}

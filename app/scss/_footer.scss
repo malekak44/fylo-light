@@ -1,0 +1,101 @@
+.footer {
+    color: white;
+    // padding: 8rem 0 3rem;
+    background: $veryDarkBlue;
+
+    // @include breakpoint-up(medium) {
+        padding: 7rem 0 3rem;
+    // }
+
+    &__content {
+        // width: 90vw;
+        margin: auto;
+        // display: block;
+        grid-template-columns: 4fr 2fr 2fr 2fr;
+
+        // @include breakpoint-up(medium) {
+            width: 86vw;
+            display: grid;
+        // }
+    }
+
+    &__logo {
+        margin-bottom: 1.5rem;
+        margin-left: 6vw;
+        // width: 10.75rem;
+
+        // @include breakpoint-up(medium) {
+            width: auto;
+        // }
+    }
+
+    &__desc {
+        display: grid;
+        grid-template-columns: 0.08fr 1fr;
+        align-items: center;
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: veryPaleCyan;
+        }
+
+        img {
+            // width: 1rem;
+
+            // @include breakpoint-up(medium) {
+                width: auto;
+            // }
+        }
+
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1.9rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__social {
+        margin-top: 1rem;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // margin-bottom: 2rem;
+
+        // @include breakpoint-up(medium) {
+            display: block;
+            margin-bottom: 0;
+        // }
+
+        svg {
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                path {
+                    fill: pink;
+                }
+            }
+
+            &:not(:last-child) {
+                // margin-right: 1rem;
+
+                // @include breakpoint-up(medium) {
+                    margin-right: 0.5rem;
+                // }
+            }
+        }
+    }
+}
