@@ -1,19 +1,41 @@
 .hero {
     display: flex;
     justify-content: center;
-    margin: 3.5rem auto 8rem;
+    margin: 2.5rem auto 8rem;
+    flex-direction: column;
+
+    @include breakpoint-up(medium) {
+        flex-direction: row;
+        margin: 3.5rem auto 8rem;
+    }
 
     &__text {
         flex: 1;
-        margin-top: 5rem;
+        margin-top: 3rem;
+        text-align: center;
+
+        @include breakpoint-up(medium) {
+            margin-top: 5rem;
+            text-align: left;
+        }
 
         &__content {
-            width: 90%;
+            width: 100%;
+            padding: 0 1rem;
+
+            @include breakpoint-up(medium) {
+                width: 90%;
+                padding: 0;
+            }
 
             h1 {
                 margin: 0;
-                font-size: 2.25rem;
+                font-size: 1.5rem;
                 line-height: 1.4;
+
+                @include breakpoint-up(medium) {
+                    font-size: 2.25rem;
+                }
             }
 
             p {
@@ -25,12 +47,27 @@
         &__form {
             input {
                 outline: none;
-                padding: 11px 20px;
-                width: 45%;
-                margin-right: 0.7rem;
+                padding: 0.6875rem 1.25rem;
+                width: 90%;
+                margin: 0 auto 1.5rem;
+                display: block;
+
+                @include breakpoint-up(medium) {
+                    width: 45%;
+                    display: inline;
+                    margin: 0 0.7rem 0 0;
+                }
 
                 &::placeholder {
                     color: $lightGray;
+                }
+            }
+
+            .button {
+                padding: 0.8125rem 7.0625rem;
+
+                @include breakpoint-up(medium) {
+                    padding: 0.8125rem 3.25rem;
                 }
             }
         }
@@ -38,6 +75,13 @@
 
     &__image {
         flex: 1;
+        order: -1;
+        padding: 0 1rem;
+
+        @include breakpoint-up(medium) {
+            order: 2;
+            padding: 0;
+        }
 
         img {
             width: 100%;

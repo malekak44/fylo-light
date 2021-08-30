@@ -7,17 +7,37 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: column;
+
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+        }
     }
 
     &__text {
         flex: 1;
+        text-align: center;
+
+        @include breakpoint-up(medium) {
+            text-align: left;
+        }
 
         h1 {
-            font-size: 30px;
+            font-size: 1.5625rem;
+
+            @include breakpoint-up(medium) {
+                font-size: 1.875rem;
+            }
         }
 
         p {
-            width: 32rem;
+            width: auto;
+            padding: 0 1rem;
+
+            @include breakpoint-up(medium) {
+                width: 32rem;
+                padding: 0;
+            }
         }
     }
 
@@ -25,8 +45,12 @@
         flex: 1;
 
         form {
-            width: 70%;
+            width: 100%;
             margin-left: auto;
+
+            @include breakpoint-up(medium) {
+                width: 70%;
+            }
 
             input {
                 display: block;
@@ -34,7 +58,7 @@
                 border: none;
                 border-radius: 3px;
                 outline: none;
-                padding: 15px;
+                padding: 0.9375rem;
                 margin-bottom: 1.5rem;
 
                 &::placeholder {
@@ -44,7 +68,7 @@
         }
 
         .button {
-            padding: 15px 52px;
+            padding: 0.9375rem 3.25rem;
         }
     }
 }

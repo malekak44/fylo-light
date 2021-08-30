@@ -1,7 +1,12 @@
 .stay-productive {
-    background: url('../images/bg-curve-desktop.svg');
+    background: url('../images/bg-curve-mobile.svg');
     background-repeat: no-repeat;
-    padding-top: 7rem;
+    padding-top: 3rem;
+
+    @include breakpoint-up(medium) {
+        background: url('../images/bg-curve-desktop.svg');
+        padding-top: 7rem;
+    }
 
     .gray-div {
         background: #F9F8FE;
@@ -12,19 +17,41 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+        }
     }
 
     &__text {
         flex: 1;
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 2rem;
+            text-align: center;
+
+            @include breakpoint-up(medium) {
+                font-size: 2rem;
+                text-align: left;
+            }
         }
 
         p {
-            width: 32.5rem;
+            width: auto;
+            padding: 0 1rem;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            color: #6a6363;
+
+            @include breakpoint-up(medium) {
+                padding: 0;
+                font-size: 1rem;
+                width: 32.5rem;
+                color: $veryDarkBlue;
+            }
         }
 
         a {
@@ -32,22 +59,47 @@
             color: $moderateCyan;
             text-decoration: none;
             border-bottom: 1px solid $moderateCyan;
+            transition: all 300ms ease-in-out;
+            text-align: center;
+            margin: auto;
+            display: block;
+            width: 11rem;
+
+            @include breakpoint-up(medium) {
+                display: inline;
+                width: auto;
+                margin: 0;
+                text-align: left;
+            }
+
+            &:hover {
+                color: lighten($moderateCyan, 20);
+                border-bottom: 1px solid lighten($moderateCyan, 20);
+            }
         }
 
         .review__card {
             box-sizing: border-box;
-            width: 21.55rem;
-            padding: 1rem 1.7rem;
-            margin-top: 2.5rem;
+            width: 20rem;
+            padding: 1rem 1rem;
+            margin: 2.5rem auto 0;
             background: white;
             border-radius: 5px;
+            letter-spacing: 0.5px;
             box-shadow: 0 0px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
+
+            @include breakpoint-up(medium) {
+                width: 21.55rem;
+                padding: 1rem 1.7rem;
+                margin: 2.5rem 0 0;
+            }
 
             p {
                 width: auto;
-                font-size: 14px;
+                font-size: 0.875rem;
                 line-height: 1.7;
                 margin-top: 2px;
+                color: $veryDarkBlue;
             }
 
             .user {
@@ -64,13 +116,13 @@
 
                     span {
                         &:first-child {
-                            font-size: 14px;
+                            font-size: 0.875rem;
                             font-weight: 600;
                             margin-bottom: 3px;
                         }
 
                         display: block;
-                        font-size: 12px;
+                        font-size: 0.75rem;
                     }
                 }
             }
@@ -79,11 +131,23 @@
 
     &__image {
         flex: 1;
+        order: -1;
+        margin-bottom: 3rem;
+
+        @include breakpoint-up(medium) {
+            order: 2;
+            margin-bottom: 0;
+        }
 
         img {
             width: 90%;
             margin-left: auto;
+            margin-right: auto;
             display: block;
+
+            @include breakpoint-up(medium) {
+                margin-right: 0;
+            }
         }
     }
 }

@@ -2,11 +2,26 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 
+    @include breakpoint-up(medium) {
+        padding: 2rem 0;
+    }
 
     &__logo {
-        flex: 1;
+        flex: 0.5;
+
+        @include breakpoint-up(medium) {
+            flex: 1;
+        }
+
+        img {
+            width: 6rem;
+
+            @include breakpoint-up(medium) {
+                width: auto;
+            }
+        }
     }
 
     &__links {
@@ -22,7 +37,11 @@
                 color: $veryDarkBlue;
 
                 &:not(:last-child) {
-                    margin-right: 3.25rem;
+                    margin-right: 1rem;
+
+                    @include breakpoint-up(medium) {
+                        margin-right: 3.25rem;
+                    }
                 }
             }
         }

@@ -1,32 +1,32 @@
 .footer {
     color: white;
-    // padding: 8rem 0 3rem;
+    padding: 5rem 0 3rem;
     background: $veryDarkBlue;
 
-    // @include breakpoint-up(medium) {
+    @include breakpoint-up(medium) {
         padding: 7rem 0 3rem;
-    // }
+    }
 
     &__content {
-        // width: 90vw;
+        width: 90vw;
         margin: auto;
-        // display: block;
+        display: block;
         grid-template-columns: 4fr 2fr 2fr 2fr;
 
-        // @include breakpoint-up(medium) {
+        @include breakpoint-up(medium) {
             width: 86vw;
             display: grid;
-        // }
+        }
     }
 
     &__logo {
         margin-bottom: 1.5rem;
         margin-left: 6vw;
-        // width: 10.75rem;
+        width: 10.75rem;
 
-        // @include breakpoint-up(medium) {
+        @include breakpoint-up(medium) {
             width: auto;
-        // }
+        }
     }
 
     &__desc {
@@ -41,11 +41,11 @@
         }
 
         img {
-            // width: 1rem;
+            width: 1rem;
 
-            // @include breakpoint-up(medium) {
+            @include breakpoint-up(medium) {
                 width: auto;
-            // }
+            }
         }
 
     }
@@ -69,15 +69,15 @@
 
     &__social {
         margin-top: 1rem;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
 
-        // @include breakpoint-up(medium) {
+        @include breakpoint-up(medium) {
             display: block;
             margin-bottom: 0;
-        // }
+        }
 
         svg {
             cursor: pointer;
@@ -85,16 +85,16 @@
 
             &:hover {
                 path {
-                    fill: pink;
+                    fill: $brightBlue;
                 }
             }
 
             &:not(:last-child) {
-                // margin-right: 1rem;
+                margin-right: 1rem;
 
-                // @include breakpoint-up(medium) {
+                @include breakpoint-up(medium) {
                     margin-right: 0.5rem;
-                // }
+                }
             }
         }
     }
